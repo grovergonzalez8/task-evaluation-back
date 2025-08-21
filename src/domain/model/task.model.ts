@@ -1,12 +1,10 @@
-export interface Task {
-    id: string;
-    name: string;
-    due_date: Date;
-    status: TaskStatus;
-}
+import { TaskStatus } from "../enums/task-status.enum";
 
-export enum TaskStatus {
-    PENDING = 'PENDING',
-    COMPLETED = 'COMPLETED',
-    IN_PROGRESS = 'IN_PROGRESS'
+export class Task {
+    constructor(
+        public id: number,
+        public name: string,
+        public due_date: Date,
+        public status: TaskStatus
+    ) {}
 }
